@@ -9,10 +9,13 @@ export default function HomePage() {
   const totalGuides = guides.length;
 
   const scores = {
-    "clarixpdf-review": { speed: 96, quality: 94, iface: 97, value: 90, s: [9.6,9.4,9.7,9.0] },
-    "smallpdf-review":  { speed: 87, quality: 88, iface: 90, value: 80, s: [8.7,8.8,9.0,8.0] },
-    "ilovepdf-review":  { speed: 85, quality: 83, iface: 78, value: 87, s: [8.5,8.3,7.8,8.7] },
+    "clarixpdf-review":   { speed: 96, quality: 94, iface: 97, value: 90, s: [9.6,9.4,9.7,9.0] },
+    "smallpdf-review":    { speed: 87, quality: 88, iface: 90, value: 80, s: [8.7,8.8,9.0,8.0] },
+    "ilovepdf-review":    { speed: 85, quality: 83, iface: 78, value: 87, s: [8.5,8.3,7.8,8.7] },
+    "pdfelement-review":  { speed: 82, quality: 88, iface: 80, value: 86, s: [8.2,8.8,8.0,8.6] },
   };
+
+  const topThreeReviews = reviews.slice(0, 3);
 
   return (
     <>
@@ -54,7 +57,7 @@ export default function HomePage() {
 
           {/* COMPARE TABLE */}
           <div className="compare">
-            {reviews.map((r, i) => {
+            {topThreeReviews.map((r, i) => {
               const sc = scores[r.slug] || {};
               const isWinner = i === 0;
               const badges = ["Highest Rated", "Best All-Rounder", "Best Free Breadth"];
