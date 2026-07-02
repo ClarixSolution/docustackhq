@@ -2,21 +2,22 @@ import Link from "next/link";
 import { getAllItems } from "../lib/posts";
 import PromoBanner from "../components/PromoBanner";
 import VerdictStrip from "../components/VerdictStrip";
-
+ 
 export default function HomePage() {
   const reviews = getAllItems("reviews");
   const guides = getAllItems("guides");
   const totalGuides = guides.length;
-
+ 
   const scores = {
     "clarixpdf-review":   { speed: 96, quality: 94, iface: 97, value: 90, s: [9.6,9.4,9.7,9.0] },
     "smallpdf-review":    { speed: 87, quality: 88, iface: 90, value: 80, s: [8.7,8.8,9.0,8.0] },
     "ilovepdf-review":    { speed: 85, quality: 83, iface: 78, value: 87, s: [8.5,8.3,7.8,8.7] },
     "pdfelement-review":  { speed: 82, quality: 88, iface: 80, value: 86, s: [8.2,8.8,8.0,8.6] },
   };
-
-  const topThreeReviews = reviews.slice(0, 3);
-
+ 
+  const orderedSlugs = ["clarixpdf-review", "smallpdf-review", "ilovepdf-review"];
+  const topThreeReviews = orderedSlugs.map(slug => reviews.find(r => r.slug === slug)).filter(Boolean);
+ 
   return (
     <>
       {/* HERO */}
@@ -54,7 +55,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
+ 
           {/* COMPARE TABLE */}
           <div className="compare">
             {topThreeReviews.map((r, i) => {
@@ -90,7 +91,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+ 
       {/* VERDICT STRIP 1 */}
       <VerdictStrip
         label="Our verdict"
@@ -98,12 +99,12 @@ export default function HomePage() {
         linkText="Full methodology →"
         linkHref="/about"
       />
-
+ 
       {/* PROMO BANNER */}
       <div className="wrap" style={{ marginTop: 56 }}>
         <PromoBanner variant="compress" />
       </div>
-
+ 
       {/* GUIDES */}
       <section className="section">
         <div className="wrap">
@@ -124,7 +125,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+ 
       {/* VERDICT STRIP 2 */}
       <VerdictStrip
         label="Did you know"
@@ -132,7 +133,7 @@ export default function HomePage() {
         linkText="Read the guide →"
         linkHref="/guides/how-to-redact-pdf"
       />
-
+ 
       {/* BOTTOM PROMO */}
       <div className="wrap" style={{ marginTop: 56, marginBottom: 0 }}>
         <PromoBanner variant="esign" />
@@ -140,3 +141,4 @@ export default function HomePage() {
     </>
   );
 }
+ 
