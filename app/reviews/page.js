@@ -9,7 +9,6 @@ export const metadata = {
 
 export default function ReviewsPage() {
   const reviews = getAllItems("reviews");
-  const badges = ["Highest Rated", "Best All-Rounder", "Best Free Breadth"];
 
   return (
     <section className="section">
@@ -23,14 +22,13 @@ export default function ReviewsPage() {
           output quality, interface clarity, and value.
         </p>
 
-        {/* Compare table reused on listing page */}
         <div className="compare" style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           {reviews.map((r, i) => (
             <div key={r.slug} className={`compare-col${i === 0 ? " is-winner" : ""}`}>
               <div className="compare-rank">
                 #{i + 1}{i === 0 && <span className="badge">Top Score</span>}
               </div>
-              <div className="compare-name">{r.title.split(":")[0]}</div>
+              <div className="compare-name">{r.title ? r.title.split(":")[0] : ""}</div>
               <div className="compare-desc">{r.description}</div>
               <div className="compare-score-row">
                 <span className="compare-score">{r.score}</span>
