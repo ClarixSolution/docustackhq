@@ -62,7 +62,7 @@ export default async function ReviewPage({ params }) {
 
       <VerdictStrip
         label="Bottom line"
-        text={`${review.title.split(":")[0]} scores ${review.score}/10 in our testing. ${review.verdict}.`}
+        text={`${review.title ? review.title.split(":")[0] : review.title} scores ${review.score}/10 in our testing. ${review.verdict}.`}
         linkText="See full ranking →"
         linkHref="/reviews"
       />
