@@ -7,31 +7,26 @@ ctaLabel: "Password-Protect a PDF with ClarixPDF"
 ctaUrl: "https://clarixpdf.com/protect"
 ---
 
-PDF passwords come in two flavors that do very different things, and mixing them up is the most common mistake people make.
+PDF passwords come in two flavors that do very different things.
 
 ## 1. The two types of PDF protection
 
-- **Open password (user password):** required to open the document at all. Use this for sensitive content — tax documents, medical records, anything you wouldn't want read by the wrong person.
-- **Permissions password (owner password):** the document opens without a password, but printing, editing, or copying text is restricted. Use this when you want people to read a document but not easily alter it.
-
-**"I don't want anyone to even open this" = open password. "Anyone can read it, but I don't want it edited" = permissions password.**
+- **Open password:** required to open the document at all. Use for sensitive content.
+- **Permissions password:** the document opens freely, but printing or editing is restricted. Use when you want people to read but not alter a document.
 
 ## 2. Add a password
 
-1. Open [ClarixPDF's protect tool](https://clarixpdf.com/protect).
+1. Open ClarixPDF's protect tool at clarixpdf.com/protect.
 2. Upload your PDF.
 3. Choose open password, permissions password, or both.
-4. Set the password(s) and download the protected file.
+4. Set the password and download the protected file.
 
 ## 3. Choose a password you won't lose
 
-There's no "forgot password" reset for a PDF — if you lose the password, the document is effectively locked forever. Two practical options:
+There's no "forgot password" reset for a PDF. Use a password manager, or a memorable four-word phrase if you need to share it verbally.
 
-- **Use a password manager** to generate and store a strong, unique password.
-- **Use a memorable phrase** if you need to share it verbally — four random words is both stronger and easier to read aloud than a string of symbols.
+## 4. Share securely
 
-## 4. Sharing protected PDFs safely
-
-Send the file and the password through **different channels** — email the file, text the password. This way, if one channel is compromised, the document still isn't.
+Send the file and the password through different channels — email the file, text the password.
 
 <div class="disclosure-note">This guide includes links to PDF tools we may have affiliate relationships with. See our <a href="/affiliate-disclosure">affiliate disclosure</a>.</div>

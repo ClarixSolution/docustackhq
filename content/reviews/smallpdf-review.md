@@ -22,11 +22,11 @@ Smallpdf has earned its place as one of the most recognized names in PDF softwar
 
 ## Where it could improve
 
-- **Free tier limits** kick in faster than some competitors — fine for daily subscribers, but occasional users may hit a wall mid-task.
-- **Subscription pricing** sits at the premium end of the category, though the breadth of tools helps justify it.
+- **Free tier limits** kick in faster than some competitors.
+- **Subscription pricing** sits at the premium end of the category.
 
 ## How it compares
 
-If you're doing PDF work daily across multiple devices and want one subscription that covers everything, Smallpdf is hard to beat. If you mostly need the core five tasks and want a generous free tier, a more focused tool may suit you better.
+If you're doing PDF work daily across multiple devices and want one subscription that covers everything, Smallpdf is hard to beat.
 
 <div class="disclosure-note">Pricing and feature tiers change frequently — always check the provider's site for current details before subscribing.</div>
